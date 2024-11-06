@@ -4,152 +4,230 @@
 
 /* html is set to 62.5% so that all the REM measurements are based on 10px sizing. So basically 1.5rem = 15px */
 html {
-    font-size: 62.5%;
-  }
-  body {
-    font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
-    line-height: 1.6;
-    font-weight: 400;
-    font-family: "Montserrat", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #FFFFFF;
-  }
-  
-  /**
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: "Montserrat", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  color: #ffffff;
+}
+
+/**
    * Links
    */
-  a {
-    font-weight: normal;
-    text-decoration: none; 
-    color:#EF6D3D;
-  }
-  a:focus {
-    outline: thin dotted;
-  }
-  
-  small {
-    font-size: 75%;
-  }
-  
-  /**
+a {
+  font-weight: normal;
+  text-decoration: none;
+  color: #ef6d3d;
+}
+a:focus {
+  outline: thin dotted;
+}
+
+small {
+  font-size: 75%;
+}
+
+/**
    * Headings
    */
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    line-height: 1;
-    text-rendering: optimizeLegibility; /*  voodoo to enable ligatures and kerning | https://developer.mozilla.org/en-US/docs/CSS/text-rendering */
-    margin-top: 0;
-    margin-bottom: 2rem;
-    font-weight: 300;
-  }
-  h1 { font-size: 3.6rem; line-height: 1.25; letter-spacing: -.1rem; }
-  h2 { font-size: 3.0rem; line-height: 1.3;  letter-spacing: -.1rem; }
-  h3 { font-size: 2.4rem; line-height: 1.35; letter-spacing: -.08rem; }
-  h4 { font-size: 1.8rem; line-height: 1.5;  letter-spacing: -.05rem; }
-  h5 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
-  h6 { font-size: 1.4rem; line-height: 1.6;  letter-spacing: 0; }
-  
-  .flex-container {
-    display: flex;
-    justify-content: space-between;
-  }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1;
+  text-rendering: optimizeLegibility; /*  voodoo to enable ligatures and kerning | https://developer.mozilla.org/en-US/docs/CSS/text-rendering */
+  margin-top: 0;
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+h1 {
+  font-size: 3.6rem;
+  line-height: 1.25;
+  letter-spacing: -0.1rem;
+}
+h2 {
+  font-size: 3rem;
+  line-height: 1.3;
+  letter-spacing: -0.1rem;
+}
+h3 {
+  font-size: 2.4rem;
+  line-height: 1.35;
+  letter-spacing: -0.08rem;
+}
+h4 {
+  font-size: 1.8rem;
+  line-height: 1.5;
+  letter-spacing: -0.05rem;
+}
+h5 {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  letter-spacing: 0;
+}
+h6 {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  letter-spacing: 0;
+}
 
-  /**
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/**
    * Paragraphs
    */
-  p {
-    margin: 0 auto 1.5em auto; /* bottom margin for paragraphs */
-  }
-  p + p {
+p {
+  margin: 0 auto 1.5em auto; /* bottom margin for paragraphs */
+}
+/* p + p {
   
-  }
-  
-  /**
+  } */
+
+/**
    * Quotes & Blockquotes
    */
-  q {
-    quotes: '\00201C' '\00201D';
-  }
-  q:before {
-    content: open-quote;
-  }
-  q:after {
-    content: close-quote;
-  }
-  
-  blockquote {
-    /*background-color: #F8F8F8;*/
-    border-left: 2px solid #AFC0D2;
-    margin: 1.6em 10%;
-    padding: .75em 1em;
-    font-size:1.8rem;
-  }
-  blockquote p:last-child {
-    margin-bottom: 0;  
-  }
-  
-  /**
+q {
+  quotes: "\00201C""\00201D";
+}
+q:before {
+  content: open-quote;
+}
+q:after {
+  content: close-quote;
+}
+
+blockquote {
+  /*background-color: #F8F8F8;*/
+  border-left: 2px solid #afc0d2;
+  margin: 1.6em 10%;
+  padding: 0.75em 1em;
+  font-size: 1.8rem;
+}
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+/**
    * Layout styles
    */
-  
-  /* Full size background image */
-  html, #container, .inner { background-color:transparent;}
-  html {
-    background:url(background3.JPG) center center no-repeat fixed;
-    background-size:cover;
-  }
-  body {
-    max-width:1200px;
-    margin:25px auto;
-  }
-  header, #content, footer { 
-    background: rgba(14, 26, 25, 0.9); 
-    padding-top:30px;
-    padding-right:40px;
-    padding-left:40px;
-    padding-bottom:40px;
-    color:#FFFFFF; 
-  }
-  
-  /* Menu Links */
-  ul.main-menu {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: left;
-    list-style: none;
-  }
-  ul.main-menu li a {
-    margin-right:20px;
-    font-size:2.0rem;
-    border-bottom: solid transparent 3px;
-    color:#cfd2da;
-  }
-  ul.main-menu li a:hover {
-    color:#FFFFFF;
-  }
-  ul.main-menu li a.active {
-    color:#FFFFFF;
-    border-bottom-color:#EF6D3D;
-  }
-  
-  /* Utility classes */
-  .hide {
-    display:none;
-  }
-  .show {
-    display:block;
-  }
 
-  logo_custom {
-    display: block;
-    max-width: 100%;
-  }
-  .filter {
-    -webkit-filter: brightness(0) invert(1);
-    filter: brightness(0) invert(1);
-  }
+/* Full size background image */
+html,
+#container,
+.inner {
+  background-color: transparent;
+}
+html {
+  background: url(background3.JPG) center center no-repeat fixed;
+  background-size: cover;
+}
+body {
+  max-width: 1200px;
+  margin: 25px auto;
+}
+header,
+#content,
+footer {
+  background: rgba(14, 26, 25, 0.9);
+  padding-top: 30px;
+  padding-right: 40px;
+  padding-left: 40px;
+  padding-bottom: 40px;
+  color: #ffffff;
+}
+
+/* Menu Links */
+ul.main-menu {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  list-style: none;
+}
+ul.main-menu li a {
+  margin-right: 20px;
+  font-size: 2rem;
+  border-bottom: solid transparent 3px;
+  color: #cfd2da;
+}
+ul.main-menu li a:hover {
+  color: #ffffff;
+}
+ul.main-menu li a.active {
+  color: #ffffff;
+  border-bottom-color: #ef6d3d;
+}
+
+/* Utility classes */
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+
+logo_custom {
+  display: block;
+  max-width: 100%;
+}
+.filter {
+  -webkit-filter: brightness(0) invert(1);
+  filter: brightness(0) invert(1);
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type="text"],
+input[type="email"] {
+  width: 50%; /* Full width */
+  padding: 12px; /* Some padding */
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: horizontal; /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+select,
+textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+button[type="submit"] {
+  background-color: #148362;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+button[type="submit"]:hover {
+  background-color: #3ba790;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+  border-radius: 5px;
+  background-color: #2b4547;
+  padding: 20px;
+}
